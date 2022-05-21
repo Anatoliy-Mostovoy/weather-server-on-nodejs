@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Anatoliy-Mostovoy/weather-server-on-nodejs/issues"
   },
-  "homepage": "https://github.com/Anatoliy-Mostovoy/weather-server-on-nodejs#readme"
+  "homepage": "https://github.com/Anatoliy-Mostovoy/weather-server-on-nodejs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
