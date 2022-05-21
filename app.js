@@ -1,11 +1,12 @@
 const express = require("express");
-const res = require("express/lib/response");
 const router = require("./routs/weather");
-const app = express();
+const morgan = require("morgan");
 
+const app = express();
+app.use(morgan("tiny"));
 app.use("/weather", router);
-app.use((req, res) => {
-  res.status(404).json({ message: "Not found" });
+app.use((error, _req, res, next) => {
+  res.status(500).json({ message: error.message });
 });
 
 module.exports = app;
