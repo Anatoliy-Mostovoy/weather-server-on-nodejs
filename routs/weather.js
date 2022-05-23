@@ -19,7 +19,6 @@ router.get(
     const appid = process.env.API_OPENWEATHER_KEY;
     try {
       const response = await axios(URL, { params: { lat, lon, appid } });
-      console.log(response.data);
       res.status(200).json(response.data);
     } catch (error) {
       res.status(400).json({ message: "Bad request" });
