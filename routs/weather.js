@@ -12,10 +12,8 @@ router.get("/", async (req, res, next) => {
     const response = await axios(URL, { params: { lat, lon, appid } });
     console.log(response.data);
     res.status(200).json(response.data);
-    return;
   } catch (error) {
     res.status(400).json({ message: "Bad request" });
-    return;
   }
 });
 
